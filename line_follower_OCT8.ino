@@ -1,3 +1,5 @@
+// left and right motors had different speeds so they were made equal
+
 int l_ir=13; //left_ir
 int r_ir=8;  //right_ir
 int c_ir=12; //centre_ir
@@ -47,8 +49,7 @@ void loop()
     analogWrite(l_wheel1,0);
     analogWrite(l_wheel2,speed_l);
     analogWrite(r_wheel1,speed_r);      
-    analogWrite(r_wheel2,0);
-    //delay(100);  //till it turns 180 degrees    
+    analogWrite(r_wheel2,0);    
   }
   
 //When it meets a t-junction 
@@ -59,8 +60,7 @@ void loop()
     analogWrite(l_wheel2,0);
     //turns left
     analogWrite(r_wheel1,speed_r);      
-    analogWrite(r_wheel2,0);
-    //delay(100);  //till it turns 90 degrees    
+    analogWrite(r_wheel2,0); 
   }
 
 //Forward
